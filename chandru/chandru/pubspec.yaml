@@ -1,0 +1,29 @@
+name: your_flutter_app
+description: A sample Flutter app
+ 
+# Version number of the application
+version: 1.0.0
+ 
+# The Flutter SDK this project depends on
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+ 
+# Dependencies for the Flutter app
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6  # Example dependency
+ 
+# Dev dependencies (e.g., for testing)
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+ 
+# Assets and resources
+flutter:
+  assets:
+    - assets/images/
+    - assets/fonts/
+ 
+# Other configurations (e.g., app icons, theme, etc.)
+# ...
