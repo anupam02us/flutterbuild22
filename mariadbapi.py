@@ -6,10 +6,10 @@ app = Flask(__name__)
 #MariaDB configurations
 #Replace below valus with your connections
 db_config = {    
-        'host': '', 
+        'host': '10.0.0.2', 
         'port': 3306,
-        'user': 'root',    
-        'password': '', #mariadb setup password 
+        'user': 'ram',    
+        'password': 'password', #mariadb setup password 
         'database': 'flask_maria'# replace this with database name which you have created in  MariaDB
 }
 
@@ -51,4 +51,4 @@ def insert_data():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
