@@ -14,8 +14,9 @@ database_name="flask_maria"
 # Create the user and grant permissions
 sudo mysql -u "$db_user" -p"$db_password" <<EOF
 Create database $database_name;
-CREATE USER '$new_user'@'localhost' IDENTIFIED BY '$new_user_password';
-GRANT ALL PRIVILEGES ON $database_name.* TO '$new_user'@'localhost';
+#CREATE USER '$new_user'@'localhost' IDENTIFIED BY '$new_user_password';
+CREATE USER '$new_user'@'%' IDENTIFIED BY '$new_user_password';
+GRANT ALL PRIVILEGES ON $database_name.* TO '$new_user'@'%';
 FLUSH PRIVILEGES;
 USE flask_maria;
 CREATE TABLE employees (
