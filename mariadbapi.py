@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import mariadb
 
 app = Flask(__name__)
-
+CORS(app)
 #MariaDB configurations
 #Replace below valus with your connections
 db_config = {    
